@@ -7,4 +7,4 @@
 ## Why does it exist?
 
 Certain websites make you read from the far-left to the far-right of your monitor. 
-This is very annoying, and this extension aims to solve that problem up. 
+This is very annoying, and this extension aims to solve that problem. 
