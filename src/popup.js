@@ -1,3 +1,8 @@
+// Copyright© Faisal A.
+
+// POPUP [ popup.js ]
+// Script for the extension's popup-page.
+
 const body = document.querySelector('body');
 const btnChangeWidth = document.querySelector('.btnChangeWidth');
 const inp = document.querySelector('.inp');
