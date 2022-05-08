@@ -7,9 +7,10 @@ const body = document.querySelector('body');
 const btnChangeWidth = document.querySelector('.btnChangeWidth');
 const inp = document.querySelector('.inp');
 
+// [ NOT CURRENTLY USED ]
 let isShortened = false;
 
-// Change the width of the website when the button is clicked
+// Add listener to the button
 btnChangeWidth.addEventListener('click', async () => {
     
     let queryOptions = { active: true, currentWindow: true };
@@ -18,19 +19,29 @@ btnChangeWidth.addEventListener('click', async () => {
     chrome.scripting.executeScript({ 
         target: { tabId: tab.id } ,
         args: [inp.value],
-        func: modifyWebpage
+        func: changeWidthOfBody
     });
 });
 
-function modifyWebpage(newWidth) {
-    let w = newWidth;
+/**
+ * Change the width of the body and center it.
+ * 
+ * @param {Number} toNewWidth The new width in pixels. Can be null.
+ */
+function changeWidthOfBody(toNewWidth) {
+    let w = toNewWidth;
 
-    if (!newWidth) {
+    // If the input had no value, assume it's 900px
+    if (!toNewWidth) {
         w = 900;
     }
 
     let body = document.querySelector('body');
+
+    // Set the width of the body
     body.style.width = `${w}px`;
+
+    // Set the margin of the body so it's centered
     body.style.marginTop = 0;
     body.style.marginBottom = 0;
     body.style.marginLeft = 'auto';
