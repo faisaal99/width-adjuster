@@ -1,0 +1,55 @@
+/* GLOBAL SETTINGS */
+
+:root {
+    /* BUTTON STYLES */
+    --button-bg: #7fffd4;
+    --button-hover-bg: #a8ffe2;
+    --button-pressed-bg: #4effc4;
+
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* INPUT SECTION */
+
+.input-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.inp {
+    float: left;
+    margin-right: 3px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+
+/* BUTTON SECTION */
+
+.btnChangeWidth {
+    padding: 10px;
+    background-color: var(--button-bg);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+    transition-duration: 0.2s;
+}
+
+.btnChangeWidth:hover {
+    background-color: var(--button-hover-bg);
+    cursor: pointer;
+}
+
+.btnChangeWidth:active {
+    background-color: var(--button-pressed-bg);
+}
