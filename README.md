@@ -2,7 +2,7 @@
 
 ## What is it?
 
-`Width Adjuster` sets the width of a webpage to a specified amount and centers the website.
+`Width Adjuster` is a Chrome Web Extension that sets the width of a webpage to a specified amount and centers the website.
 
 ## Why does it exist?
 
